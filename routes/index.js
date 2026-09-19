@@ -30,5 +30,8 @@ import{myController} from "../controllers/myController.js";
 const router = express.Router();
 router.get("/", homePage);
 router.get("/myController", myController.index)
-
+router.get("/nats", (req, res) => {
+    console.log(products);
+    res.render("nats", { products });
+});
 export default router;

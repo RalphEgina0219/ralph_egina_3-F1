@@ -1,0 +1,47 @@
+<!-- PRODUCTS TABLE -->
+<div class="bg-slate-800 rounded-xl mt-6 overflow-hidden">
+
+    <div class="p-5 border-b border-slate-700 flex justify-between items-center">
+        <div>
+            <h3 class="text-lg font-semibold">Products</h3>
+            <p class="text-gray-400 text-sm">
+                List of available products
+            </p>
+        </div>
+
+        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm">
+            + Add Product
+        </button>
+    </div>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead class="bg-slate-900 text-gray-400">
+                <tr>
+                    <th class="text-left px-6 py-4">ID</th>
+                    <th class="text-left px-6 py-4">Product Name</th>
+                    <th class="text-left px-6 py-4">Description</th>
+                    <th class="text-left px-6 py-4">Category</th>
+                    <th class="text-left px-6 py-4">Stock</th>
+                    <th class="text-left px-6 py-4">Price</th>
+                  
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each products}}
+                <tr class="border-b border-slate-700 hover:bg-slate-700">
+                    <td class="px-6 py-4">{{id}}</td>
+                    <td class="px-6 py-4 capitalize">{{name}}</td>
+                    <td class="px-6 py-4 text-gray-300">{{description}}</td>
+                    <td class="px-6 py-4 capitalize">{{category}}</td>
+                    <td class="px-6 py-4">{{stock}}</td>
+                    <td class="px-6 py-4">₱{{price}}</td>
+                  
+                </tr>
+                
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

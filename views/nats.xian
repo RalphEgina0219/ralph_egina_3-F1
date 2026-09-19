@@ -1,0 +1,28 @@
+{{>head}}
+
+<body class="bg-slate-900 text-white">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+   {{>aside}}
+    <!-- MAIN -->
+    <main class="flex-1 p-6">
+
+        <!-- HEADER -->
+        {{>header}}
+
+        <!-- CARDS -->
+       {{>cards}}
+
+
+        <!-- CHART + PROFIT -->
+        {{>chart}}
+    
+
+
+    </main>
+
+</div>
+
+</body>
